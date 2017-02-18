@@ -1,0 +1,32 @@
+<div>
+    <form class="container">
+        <div class="col-md-4 navbar-right">
+        <div class="form-group">
+            <label for="nome">Nome do aluno:</label>
+            <select class="form-control" id="nome" ng-model="vm.nota.alunoID" >
+                <option value="{{a.id}}" ng-repeat="a in vm.alunos" >{{a.nome}}</option>
+            </select>
+        </div>
+         <div class="form-group">
+            <label for="n1">Nota da primeira prova:</label>
+             <input class="form-control" ng-model="vm.nota.nota1" type="number" min="1" max="10" id="n1" />
+        </div>
+
+        <div class="form-group">
+            <label for="n2">Nota da segunda prova:</label>
+            <input class="form-control" ng-model="vm.nota.nota2" type="number" min="1" max="10" id="n2" />
+        </div>
+
+        <div class="form-group">
+            <label for="n3">Nota da segunda prova:</label>
+            <input class="form-control" ng-model="vm.nota.nota3" type="number" min="1" max="10" id="n3" />
+        </div>
+        <div class="form-group">
+            <label for="n4">Nota da segunda prova:</label>
+            <input class="form-control" ng-model="vm.nota.nota4" type="number" min="1" max="10" id="n4" />
+        </div>
+
+        <button class="btn btn-primary btn-lg btn-block" ng-click="vm.salvarNota(vm.nota)" >Salvar</button>
+        </div>
+    </form>
+</div>

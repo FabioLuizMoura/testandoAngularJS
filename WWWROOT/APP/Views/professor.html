@@ -1,0 +1,28 @@
+ <div class="container">
+ <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-left">Nome</th>
+                    <th class="text-center">Nota 02</th>
+                    <th class="text-center">Nota 02</th>
+                    <th class="text-center">Nota 03</th>
+                    <th class="text-center">Nota 04</th>
+                    <th class="text-center"></th>
+                    <th class="text-center"></th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                    <!--<td ng-repeat="al in alunos" ng-bind="alunoNota(al,n)"></td>-->
+                <tr ng-repeat="n in vm.notas" style="cursor:pointer">
+                    <td class="text-left" ng-repeat="al in vm.alunos" ng-bind="vm.alunoNota(al,n)" ng-hide="vm.esconder(vm.alunoNota(al,n))"></td>
+                    <td class="text-center">{{::n.nota1}}</td>
+                    <td class="text-center">{{::n.nota2}}</td>
+                    <td class="text-center">{{::n.nota3}}</td>
+                    <td class="text-center">{{::n.nota4}}</td>
+                    <td style="width:5px"><button type="button" class="btn btn-default" ng-click="vm.editar(n)">Alterar</button></td>
+                    <td style="width:5px"><button type="button" class="btn btn-default" ng-click="vm.remover(n)">Remover</button></td>
+                </tr>
+            </tbody>
+        </table>
+ </div>

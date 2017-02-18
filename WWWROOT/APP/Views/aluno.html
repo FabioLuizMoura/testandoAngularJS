@@ -1,0 +1,32 @@
+<div class="container">
+ <table class="table">
+            <thead>
+                <tr>
+                    <th colspan="4">
+                        <h3>Notas</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th class="text-center">Materia</th>
+                    <th class="text-center">Nota 02</th>
+                    <th class="text-center">Nota 02</th>
+                    <th class="text-center">Nota 03</th>
+                    <th class="text-center">Nota 04</th>
+                    <th class="text-center">Media</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                    <!--<td ng-repeat="al in alunos" ng-bind="alunoNota(al,n)"></td>-->
+                <tr ng-repeat="n in vm.notas" style="cursor:pointer">
+                    <!--<td class="text-center" ng-repeat="al in alunos" ng-bind="alunoNota(al,n)" ng-hide="esconder(alunoNota(al,n))"></td>-->
+                    <td class="text-center" ng-repeat="p in vm.materias" ng-bind="p.materia" ng-hide="vm.materiaNota(p,n)" ></td>
+                    <td class="text-center">{{::n.nota1}}</td>
+                    <td class="text-center">{{::n.nota2}}</td>
+                    <td class="text-center">{{::n.nota3}}</td>
+                    <td class="text-center">{{::n.nota4}}</td>
+                    <td class="text-center" ng-bind="vm.media(n)" ></td>
+                </tr>
+            </tbody>
+        </table>
+ </div>

@@ -1,0 +1,15 @@
+<div>
+    <form class="container">
+        <div class="col-md-4 navbar-right">
+        <div class="form-group">
+            <label for="nome">Nome do aluno:</label>
+            <input class="form-control" ng-model="vm.aluno.nome" type="text" id="nome"/>
+        </div>
+         <div class="form-group">
+            <label for="ra">RA do aluno:</label>
+            <input class="form-control" ng-model="vm.aluno.ra" type="text" id="ra"/>
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" ng-click="vm.salvarAluno(vm.aluno)" >Salvar</button>
+        </div>
+    </form>
+</div>
